@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
 ]
 
+
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -86,29 +87,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'phi_mart.wsgi.app'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
-    'https://phimart.vercel.app',
+    'https://e-commerce-azure-zeta.vercel.app',
 
 ]
-CORS_ALLOW_HEADERS = [
-    'authorization',
-    'content-type',
-    'accept',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-]
-
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS',
-]
-
-CORS_ALLOW_CREDENTIALS = True
 
 
 INTERNAL_IPS = [
@@ -167,7 +148,7 @@ cloudinary.config(
 )
 
 # Media storage settings
-DEFAULT_FILE_STORAE='cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Internationalization
